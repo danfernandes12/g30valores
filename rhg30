@@ -1,0 +1,350 @@
+import React from 'react';
+
+// Importando ícones do lucide-react para uso no dashboard
+import { Target, Lightbulb, Handshake, Shield, Scale, Briefcase, FileText, Users, Home, BookOpen, TrendingUp, MessageSquare, Laptop, ClipboardCheck, CalendarCheck, Gavel, UserCheck, Award, Building, HeartHandshake } from 'lucide-react';
+
+// Componente principal do aplicativo
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 p-4 sm:p-6 lg:p-8 font-sans text-gray-800">
+      {/* Cabeçalho do Dashboard - Tentando imitar um slide de título */}
+      <header className="text-center mb-10 bg-gradient-to-r from-blue-700 to-blue-900 text-white py-12 rounded-xl shadow-lg">
+        <h1 className="text-4xl sm:text-5xl font-extrabold mb-2">
+          Dashboard do Regulamento Interno
+        </h1>
+        <p className="text-lg sm:text-xl font-light">
+          G30 Educação Automotiva
+        </p>
+      </header>
+
+      {/* Seção de Mensagem da Diretoria - Estilo de card com borda e fundo claro */}
+      <section className="bg-white rounded-xl shadow-lg p-6 mb-8 border-l-8 border-blue-600">
+        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+          <MessageSquare className="mr-3 text-blue-600" size={28} /> Mensagem da Diretoria
+        </h2>
+        <p className="text-gray-700 leading-relaxed text-lg">
+          Seja bem-vindo à G30 Educação Automotiva. Este manual foi criado para guiá-lo nas suas funções e para garantir que você compreenda nossos valores e políticas. Esperamos que este documento seja um recurso valioso durante sua jornada conosco.
+        </p>
+      </section>
+
+      {/* Seção de Visão, Missão e Valores - Layout em grid com cards coloridos */}
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        {/* Card de Visão */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-t-8 border-green-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-green-800 mb-3 flex items-center">
+            <Target className="mr-2 text-green-600" size={24} /> Visão
+          </h3>
+          <p className="text-gray-700 text-base">
+            A G30 Educação Automotiva é um Projeto de DEUS e nasceu para transformar o jeito de vender veículos no Brasil, ser a líder nacional incontestável em soluções de educação e aceleração de resultados para o Mercado Automotivo. Nosso objetivo é transformar Empresas e Pessoas, estabelecendo novos padrões de excelência e inovação para Lojas e Concessionárias de veículos em todo o Brasil.
+          </p>
+        </div>
+        {/* Card de Missão */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-t-8 border-purple-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-purple-800 mb-3 flex items-center">
+            <Lightbulb className="mr-2 text-purple-600" size={24} /> Missão
+          </h3>
+          <p className="text-gray-700 text-base">
+            Transformar as VIDAS E AS VENDAS de Lojas de Veículos no Brasil e no Mundo com estratégias inovadoras e soluções práticas para acelerar os resultados e o crescimento de nossos clientes.
+          </p>
+        </div>
+        {/* Card de Valores */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-t-8 border-yellow-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-yellow-800 mb-3 flex items-center">
+            <Handshake className="mr-2 text-yellow-600" size={24} /> Valores
+          </h3>
+          <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+            <li>Compromisso com Resultados</li>
+            <li>Busca pela Inovação Contínua</li>
+            <li>Integridade e Transparência</li>
+            <li>Engajamento com Colaboradores</li>
+            <li>Foco no Cliente</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Seção de Objetivo e Aplicação - Layout em grid com cards coloridos */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Card de Objetivo */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-l-8 border-indigo-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-indigo-800 mb-3 flex items-center">
+            <ClipboardCheck className="mr-2 text-indigo-600" size={24} /> Objetivo
+          </h3>
+          <p className="text-gray-700 text-base">
+            Este manual serve para estabelecer todas as disposições para conduta interna de caráter geral da G30 Educação Automotiva para o bom andamento do trabalho e o benefício coletivo com responsabilidade social. Para qualquer outra disposição não tratada neste procedimento, devem-se consultar procedimentos específicos da G30.
+          </p>
+        </div>
+        {/* Card de Aplicação */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-l-8 border-pink-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-pink-800 mb-3 flex items-center">
+            <Users className="mr-2 text-pink-600" size={24} /> Aplicação
+          </h3>
+          <p className="text-gray-700 text-base">
+            Este regulamento se aplica a todos os colaboradores efetivos ou terceiros e, em partes, aos prestadores de serviços, fornecedores ou visitantes. No caso de colaborador efetivo, este regulamento integra o contrato individual e a sua ação reguladora estende-se a todos os colaboradores, sem distinção hierárquica, de acordo com a Consolidação das Leis do Trabalho (CLT) e a Convenção Coletiva de Trabalho e demais normas.
+          </p>
+        </div>
+      </section>
+
+      {/* Seção de Confidencialidade e Normas Gerais - Layout em grid com cards coloridos */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        {/* Card de Confidencialidade */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-l-8 border-teal-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-teal-800 mb-3 flex items-center">
+            <Shield className="mr-2 text-teal-600" size={24} /> Confidencialidade
+          </h3>
+          <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+            <li>Manter informações privadas e protegidas contra divulgação não autorizada.</li>
+            <li>Proteger informações confiadas a alguém, mantendo-as em segredo.</li>
+            <li>Contribuir para o bom funcionamento da sociedade ou organização.</li>
+          </ul>
+        </div>
+        {/* Card de Normas Gerais */}
+        <div className="bg-white rounded-xl shadow-lg p-6 border-l-8 border-orange-600 transform transition-transform hover:scale-105">
+          <h3 className="text-xl font-bold text-orange-800 mb-3 flex items-center">
+            <Gavel className="mr-2 text-orange-600" size={24} /> Normas Gerais
+          </h3>
+          <ul className="list-disc list-inside text-gray-700 text-base space-y-1">
+            <li>Garantir a segurança e privacidade das informações.</li>
+            <li>Orientar sobre como coletar, processar e proteger dados pessoais (LGPD).</li>
+            <li>Garantir que o compartilhamento de informações seja transparente e voluntário.</li>
+            <li>Promover a ordem, a justiça e a convivência harmoniosa.</li>
+            <li>Garantir a excelência, segurança e confiabilidade.</li>
+          </ul>
+        </div>
+      </section>
+
+      {/* Seção de Orientação aos Colaboradores: Direitos, Benefícios, Promoção, Férias - Título com fundo e cards menores */}
+      <section className="bg-white rounded-xl shadow-lg p-6 mb-8 border-l-8 border-blue-600">
+        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+          <UserCheck className="mr-3 text-blue-600" size={28} /> Orientação aos Colaboradores
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card de Direitos */}
+          <div className="bg-blue-50 rounded-lg p-4 shadow-sm border border-blue-200">
+            <h4 className="text-lg font-semibold text-blue-800 mb-2 flex items-center">
+              <Scale className="mr-2 text-blue-600" size={20} /> Direitos
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Admissão</li>
+              <li>Salário</li>
+              <li>13º Salário</li>
+              <li>FGTS</li>
+              <li>Reembolso de Despesas</li>
+            </ul>
+          </div>
+          {/* Card de Benefícios */}
+          <div className="bg-green-50 rounded-lg p-4 shadow-sm border border-green-200">
+            <h4 className="text-lg font-semibold text-green-800 mb-2 flex items-center">
+              <Award className="mr-2 text-green-600" size={20} /> Benefícios
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Vale Alimentação</li>
+              <li>Auxílio Combustível</li>
+              <li>Gympass</li>
+              <li>SESC</li>
+              <li>Espaço de Convívio</li>
+            </ul>
+          </div>
+          {/* Card de Promoção */}
+          <div className="bg-purple-50 rounded-lg p-4 shadow-sm border border-purple-200">
+            <h4 className="text-lg font-semibold text-purple-800 mb-2 flex items-center">
+              <TrendingUp className="mr-2 text-purple-600" size={20} /> Promoção
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Desempenho</li>
+              <li>Competências</li>
+              <li>Experiência</li>
+              <li>Contribuição</li>
+              <li>Potencial</li>
+            </ul>
+          </div>
+          {/* Card de Férias */}
+          <div className="bg-yellow-50 rounded-lg p-4 shadow-sm border border-yellow-200">
+            <h4 className="text-lg font-semibold text-yellow-800 mb-2 flex items-center">
+              <CalendarCheck className="mr-2 text-yellow-600" size={20} /> Férias
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Ser planejadas com 30 dias de antecedência</li>
+              <li>É facultado à empresa determinar o período de gozo</li>
+              <li>Podem ser fracionadas em até 3 períodos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Orientação aos Colaboradores: Rescisões, Licenças, Procedimentos Administrativos */}
+      <section className="bg-white rounded-xl shadow-lg p-6 mb-8 border-l-8 border-blue-600">
+        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+          <Building className="mr-3 text-blue-600" size={28} /> Procedimentos da Empresa
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Card de Rescisões */}
+          <div className="bg-red-50 rounded-lg p-4 shadow-sm border border-red-200">
+            <h4 className="text-lg font-semibold text-red-800 mb-2 flex items-center">
+              <FileText className="mr-2 text-red-600" size={20} /> Rescisões
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Quebra de Contrato pela empresa sem justa causa</li>
+              <li>Quebra de Contrato pelo colaborador sem justa causa</li>
+              <li>Término de Contrato</li>
+              <li>Desligamento pela empresa sem justa causa</li>
+              <li>Pedido de desligamento pelo colaborador</li>
+              <li>Desligamento por justa causa</li>
+            </ul>
+          </div>
+          {/* Card de Licença Remunerada I */}
+          <div className="bg-teal-50 rounded-lg p-4 shadow-sm border border-teal-200">
+            <h4 className="text-lg font-semibold text-teal-800 mb-2 flex items-center">
+              <HeartHandshake className="mr-2 text-teal-600" size={20} /> Licença Remunerada I
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Auxílio Doença</li>
+              <li>Auxílio por Acidente de Trabalho</li>
+              <li>Licença Maternidade/Paternidade</li>
+              <li>Licença Adoção</li>
+              <li>Atestado Médico e Atestado Odontológico</li>
+            </ul>
+          </div>
+          {/* Card de Licença Remunerada II */}
+          <div className="bg-orange-50 rounded-lg p-4 shadow-sm border border-orange-200">
+            <h4 className="text-lg font-semibold text-orange-800 mb-2 flex items-center">
+              <CalendarCheck className="mr-2 text-orange-600" size={20} /> Licença Remunerada II
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Casamento</li>
+              <li>Falecimento</li>
+              <li>Internação | Alta Médica</li>
+              <li>Acompanhamento Médico Filhos</li>
+              <li>Doação de Sangue</li>
+              <li>Comparecimento em Juízo</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Orientação aos Colaboradores: Faltas, Medidas Disciplinares, Recursos Tecnológicos, Normas Sociais */}
+      <section className="bg-white rounded-xl shadow-lg p-6 mb-8 border-l-8 border-blue-600">
+        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+          <BookOpen className="mr-3 text-blue-600" size={28} /> Regras e Recursos
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card de Faltas */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <Home className="mr-2 text-gray-600" size={20} /> Faltas
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Faltas Justificadas</li>
+              <li>Faltas Comunicadas</li>
+              <li>Faltas Injustificadas</li>
+            </ul>
+          </div>
+          {/* Card de Medidas Disciplinares */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <Gavel className="mr-2 text-gray-600" size={20} /> Medidas Disciplinares
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Advertência</li>
+              <li>Suspensão</li>
+              <li>Demissão por justa causa</li>
+            </ul>
+          </div>
+          {/* Card de Utilização de Recursos Tecnológicos */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <Laptop className="mr-2 text-gray-600" size={20} /> Recursos Tecnológicos
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Notebook</li>
+              <li>Números Corporativos</li>
+              <li>Headfone</li>
+              <li>E-mail Corporativo</li>
+            </ul>
+          </div>
+          {/* Card de Normas Sociais */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <Users className="mr-2 text-gray-600" size={20} /> Normas Sociais
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Pontualidade</li>
+              <li>Profissionalismo</li>
+              <li>Colaboração</li>
+              <li>Respeito</li>
+              <li>Ética</li>
+              <li>Cumprimento de Prazos</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Orientação aos Colaboradores: Home Office, Comunicação, LGPD, Treinamentos */}
+      <section className="bg-white rounded-xl shadow-lg p-6 mb-8 border-l-8 border-blue-600">
+        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center">
+          <Briefcase className="mr-3 text-blue-600" size={28} /> Ambientes de Trabalho e Desenvolvimento
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card de Home Office */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <Home className="mr-2 text-gray-600" size={20} /> Home Office
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Avaliação</li>
+              <li>Autorização</li>
+              <li>Pontos de atenção</li>
+            </ul>
+          </div>
+          {/* Card de Comunicação e Feedback */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <MessageSquare className="mr-2 text-gray-600" size={20} /> Comunicação e Feedback
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Google Meet</li>
+              <li>Grupos WhatsApp</li>
+              <li>E-mail Corporativo</li>
+              <li>Número Corporativo</li>
+            </ul>
+          </div>
+          {/* Card de Lei Geral de Proteção de Dados (LGPD) */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <Shield className="mr-2 text-gray-600" size={20} /> Lei Geral de Proteção de Dados
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Proteger os direitos fundamentais de liberdade e de privacidade</li>
+              <li>Garantir proteção a todos os dados cujos titulares são pessoas naturais</li>
+            </ul>
+          </div>
+          {/* Card de Treinamentos */}
+          <div className="bg-gray-50 rounded-lg p-4 shadow-sm border border-gray-200">
+            <h4 className="text-lg font-semibold text-gray-800 mb-2 flex items-center">
+              <BookOpen className="mr-2 text-gray-600" size={20} /> Treinamentos
+            </h4>
+            <ul className="list-disc list-inside text-gray-700 text-sm space-y-0.5">
+              <li>Melhorar a produtividade</li>
+              <li>Reduzir a taxa de turnover</li>
+              <li>Aumentar a qualidade nos resultados</li>
+              <li>Aprimorar os fluxos de trabalho</li>
+              <li>Transformar o clima organizacional</li>
+              <li>Aumentar o engajamento</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção de Agradecimento - Estilo de card com borda e fundo claro */}
+      <section className="bg-white rounded-xl shadow-lg p-6 text-center border-l-8 border-blue-600">
+        <h2 className="text-2xl font-bold text-blue-800 mb-4 flex items-center justify-center">
+          <Handshake className="mr-3 text-blue-600" size={28} /> Agradecimento
+        </h2>
+        <p className="text-gray-700 leading-relaxed text-lg">
+          Com organização e planejamento, a proatividade se fortalece, e com automotivação como combustível, alcançamos o impossível. Todo sucesso é fruto de um grande trabalho em TIME.
+        </p>
+      </section>
+    </div>
+  );
+};
+
+export default App;
